@@ -1,21 +1,28 @@
-# Canal Expertos Tech
+# JWT Learning with base a fork project Channel down
+
+# Chanel Expertos Tech
 
 **Vídeo tutorial:** </br>
 
 
-**Redes Sociais:** https://linktr.ee/expertostech  
+**Social Media:** https://linktr.ee/expertostech  
 
-# PROJETO INICIAL - COMO CRIAR UM TOKEN JWT COM SPRING SECURITY, AUTH0 E JPA | JAVA E POSTGRESQL
+# INITIAL PROJECT - HOW TO CREATE TOKEN JWT WITH SPRING BOOT FROM SPRING SECURITY, AUTH AND JPA | JAVA AND POSTGRESQL
 
-**Nível:** Intermediário
+**Level:** Middle
 
-Esse projeto foi desenvolvido no tutorial: Como criptografar senhas com Spring Boot, Spring Security e JPA<br> 
+This project was developed in tutorial: How to encrypt passwords with Spring Boot, Spring Security and JPA<br> 
 Playlist: https://youtu.be/YgfO8EHLAEc&list=PLTN1gMq8EHuIvkz0ZdFSufK-eI0FrnkvI
 
-Será usado como base para o tutorial: Como criar um token JWT com Spring Boot, Spring Security e JPA.<br>
-Para isso os pacotes e o nome do projeto foi renomeado.
+will be used based on the tutorial: How to make token JWT with Spring Boot, Spring Security, and JPA.
+For that packages and names were replaced
 
-Redes Sociais: https://linktr.ee/expertostech
+====================================================================
 
-=================  
-NÃO CLIQUE AQUI: http://tiny.cc/1kzosz 
+CLICK FROM SUBSCRIBE IN CHANNEL HIM : http://tiny.cc/1kzosz 
+
+====================================================================
+
+## Personal modifications
+
+I created a docker container for Postgres database.
