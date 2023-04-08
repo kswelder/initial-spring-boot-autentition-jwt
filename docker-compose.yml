@@ -1,0 +1,27 @@
+version: '3.5'
+
+services:
+  database:
+    image: postgres:11
+    restart: always
+    container_name: postgres
+    ports:
+      - "5432:5432"
+    networks:
+      - jwtnetworktesting
+    environment:
+      - POSTGRES_DB=postgres
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+  adminer:
+    image: adminer
+    container_name: jwtadminer
+    restart: always
+    ports:
+      - "3232:8080"
+    networks:
+      - jwtnetworktesting
+
+networks:
+  jwtnetworktesting:
+    driver: bridge
