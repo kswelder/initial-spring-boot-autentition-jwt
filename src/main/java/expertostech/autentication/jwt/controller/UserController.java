@@ -1,7 +1,7 @@
 package expertostech.autentication.jwt.controller;
 
-import expertostech.autentication.jwt.model.UsuarioModel;
-import expertostech.autentication.jwt.repository.UsuarioRepository;
+import expertostech.autentication.jwt.model.UserModel;
+import expertostech.autentication.jwt.repository.UserRepository;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -12,23 +12,23 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/usuario")
-public class UsuarioController {
+public class UserController {
 
-    private final UsuarioRepository repository;
+    private final UserRepository repository;
     private final PasswordEncoder encoder;
 
-    public UsuarioController(UsuarioRepository repository, PasswordEncoder encoder) {
+    public UserController(UserRepository repository, PasswordEncoder encoder) {
         this.repository = repository;
         this.encoder = encoder;
     }
 
     @GetMapping("/listarTodos")
-    public ResponseEntity<List<UsuarioModel>> listarTodos() {
+    public ResponseEntity<List<UserModel>> listarTodos() {
         return ResponseEntity.ok(repository.findAll());
     }
 
     @PostMapping("/salvar")
-    public ResponseEntity<UsuarioModel> salvar(@RequestBody UsuarioModel usuario) {
+    public ResponseEntity<UserModel> salvar(@RequestBody UserModel usuario) {
         usuario.setPassword(encoder.encode(usuario.getPassword()));
         return ResponseEntity.ok(repository.save(usuario));
     }
@@ -37,12 +37,12 @@ public class UsuarioController {
     public ResponseEntity<Boolean> validarSenha(@RequestParam String login,
                                                 @RequestParam String password) {
 
-        Optional<UsuarioModel> optUsuario = repository.findByLogin(login);
+        Optional<UserModel> optUsuario = repository.findByLogin(login);
         if (optUsuario.isEmpty()) {
             return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(false);
         }
 
-        UsuarioModel usuario = optUsuario.get();
+        UserModel usuario = optUsuario.get();
         boolean valid = encoder.matches(password, usuario.getPassword());
 
         HttpStatus status = (valid) ? HttpStatus.OK : HttpStatus.UNAUTHORIZED;
