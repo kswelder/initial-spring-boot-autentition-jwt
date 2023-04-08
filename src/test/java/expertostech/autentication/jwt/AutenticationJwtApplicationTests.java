@@ -1,4 +1,4 @@
-package expertostech.autenticacao.jwt;
+package expertostech.autentication.jwt;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

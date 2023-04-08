@@ -1,4 +1,4 @@
-package expertostech.autenticacao.jwt.model;
+package expertostech.autentication.jwt.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

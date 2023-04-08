@@ -1,6 +1,6 @@
-package expertostech.autenticacao.jwt.repository;
+package expertostech.autentication.jwt.repository;
 
-import expertostech.autenticacao.jwt.model.UsuarioModel;
+import expertostech.autentication.jwt.model.UsuarioModel;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;

@@ -1,7 +1,7 @@
-package expertostech.autenticacao.jwt.controller;
+package expertostech.autentication.jwt.controller;
 
-import expertostech.autenticacao.jwt.model.UsuarioModel;
-import expertostech.autenticacao.jwt.repository.UsuarioRepository;
+import expertostech.autentication.jwt.model.UsuarioModel;
+import expertostech.autentication.jwt.repository.UsuarioRepository;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.crypto.password.PasswordEncoder;
